@@ -18,3 +18,9 @@ TEST(GoalUndoTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+TEST(GoalUndoTest, getEmptyGoal)
+{
+	GoalUndo gtest;
+	ASSERT_EQ(" ", gtest.getGoal());
+}
