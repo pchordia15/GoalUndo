@@ -79,6 +79,14 @@ TEST(GoalUndoTest, undoOpsCover)
    ASSERT_EQ("", gtest.getOperations());
 }
 
+TEST(GoalUndoTest, checkEmptyUndoOps)
+{
+  GoalUndo gtest;
+  gtest.undoOperation("Empty");
+  ASSERT_EQ("",gtest.getGoal());
+  ASSERT_EQ("",gtest.getOperations());
+}
+
 //Issue in the overloaded undoOperation fails following test
 TEST(GoalUndoTest, shouldFail)
 {
